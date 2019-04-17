@@ -1,7 +1,6 @@
 # 一个辅助于vue-router的插件
 ---
-    生成一全局 _routes 栈  去映射真正的routers的交互顺序，并且通过keyName生成的字符去保证路由的唯一性，就可以实现原生app的页面跳转 例如A->B->A 对于_routes来说生成的是3个 _route .
----
+生成一全局 _routes 栈  去映射真正的routers的交互顺序，并且通过keyName生成的字符去保证路由的唯一性，就可以实现原生app的页面跳转 例如A->B->A 对于_routes来说生成的是3个 _route .
 #### 使用方式
 ---
 ```
@@ -37,5 +36,6 @@ this.$navigation.on('reset', () => {})
 #### 实例方法
 ```
 this.$navigation.getRoutes()    // 获取_routes
-this.$navigation.cleanRoutes()  // 清空_routes (如果_routes.length ===1 ,可在beforeEach进行拦截，可模拟实现目前router未实现的cleanRoutes)  
+this.$navigation.cleanRoutes()  // 清空_routes 
+//(如果_routes.length ===1 ,可在beforeEach进行拦截，可模拟实现目前router未实现的cleanRoutes)  
 ```
